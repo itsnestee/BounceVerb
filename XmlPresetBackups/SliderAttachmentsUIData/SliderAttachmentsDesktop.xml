@@ -37,13 +37,13 @@
   <Component type="ScriptLabel" id="Label8" x="460.0" y="550.0" text="RANDOMISE"
              fontName="Actay Wide"/>
   <Component type="ScriptSlider" id="Knob9" x="0.0" y="0.0" width="100.0"
-             text="D1"/>
+             text="D1" visible="0"/>
   <Component type="ScriptSlider" id="Knob10" x="120.0" y="0.0" width="100.0"
-             text="D2"/>
+             text="D2" visible="0"/>
   <Component type="ScriptSlider" id="Knob11" x="240.0" y="0.0" width="100.0"
-             text="D3"/>
+             text="D3" visible="0"/>
   <Component type="ScriptSlider" id="Knob12" x="360.0" y="0.0" width="100.0"
-             text="D4"/>
+             text="D4" visible="0"/>
   <Component type="ScriptSlider" id="Knob13" x="490.0" y="0.0" width="100.0"
-             text="D5"/>
+             text="D5" visible="0"/>
 </ContentProperties>

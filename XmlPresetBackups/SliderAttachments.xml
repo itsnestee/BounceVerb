@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Processor Type="SynthChain" ID="Gui Setup" Bypassed="0" Gain="1.0" Balance="0.0"
-           VoiceLimit="64.0" KillFadeTime="20.0" IconColour="0" packageName=""
-           BuildVersion="650">
+<Processor Type="SynthChain" ID="SliderAttachments" Bypassed="0" Gain="1.0"
+           Balance="0.0" VoiceLimit="64.0" KillFadeTime="20.0" IconColour="0"
+           packageName="" BuildVersion="650">
   <ChildProcessors>
     <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
       <ChildProcessors>
@@ -16,14 +16,14 @@
             <Control type="ScriptSlider" id="Knob5" value="0.0"/>
             <Control type="ScriptSlider" id="Knob6" value="0.0"/>
             <Control type="ScriptSlider" id="Knob7" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob8" value="0.05000000074505806"/>
+            <Control type="ScriptSlider" id="Knob8" value="0.0"/>
             <Control type="ScriptSlider" id="Knob9" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob10" value="0.05000000074505806"/>
-            <Control type="ScriptSlider" id="Knob11" value="0.1000000014901161"/>
-            <Control type="ScriptSlider" id="Knob12" value="0.1500000059604645"/>
-            <Control type="ScriptSlider" id="Knob13" value="0.2000000029802322"/>
+            <Control type="ScriptSlider" id="Knob10" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob11" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob12" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob13" value="0.0"/>
           </Content>
-          <UIData Source="Gui SetupUIData"/>
+          <UIData Source="SliderAttachmentsUIData"/>
         </Processor>
       </ChildProcessors>
     </Processor>
