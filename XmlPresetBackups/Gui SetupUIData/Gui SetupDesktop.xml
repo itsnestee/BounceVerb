@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptSlider" id="Knob1" x="40.0" y="350.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="HOLDUP"/>
+  <Component type="ScriptSlider" id="Knob2" x="200.0" y="350.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="HIGHCUT"/>
+  <Component type="ScriptSlider" id="Knob3" x="350.0" y="350.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="STRETCHX"/>
+  <Component type="ScriptSlider" id="Knob4" x="480.0" y="350.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="SIZE"/>
+  <Component type="ScriptSlider" id="Knob5" x="40.0" y="480.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="RATE"/>
+  <Component type="ScriptSlider" id="Knob6" x="200.0" y="480.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="DENSITY"/>
+  <Component type="ScriptSlider" id="Knob7" x="350.0" y="480.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="BOOST"/>
+  <Component type="ScriptSlider" id="Knob8" x="490.0" y="480.0" width="70.0"
+             height="70.0" showValuePopup="Right" showTextBox="0" text="RANDOMISE"/>
+  <Component type="ScriptLabel" id="Label1" x="10.0" y="420.0" fontName="Actay Wide"
+             text="HOLDUP"/>
+  <Component type="ScriptLabel" id="Label2" x="170" y="420.0" text="HIGHCUT"
+             fontName="Actay Wide"/>
+  <Component type="ScriptLabel" id="Label3" x="320" y="420.0" text="STRETCHX"
+             fontName="Actay Wide"/>
+  <Component type="ScriptLabel" id="Label4" x="450" y="420.0" text="SIZE"
+             fontName="Actay Wide"/>
+  <Component type="ScriptLabel" id="Label5" x="10.0" y="550" text="RATE" fontName="Actay Wide"/>
+  <Component type="ScriptLabel" id="Label6" x="170" y="550" text="DENSITY"
+             fontName="Actay Wide"/>
+  <Component type="ScriptLabel" id="Label7" x="320" y="550" text="BOOST" fontName="Actay Wide"/>
+  <Component type="ScriptLabel" id="Label8" x="460.0" y="550.0" text="RANDOMISE"
+             fontName="Actay Wide"/>
+  <Component type="ScriptSlider" id="Knob9" x="0.0" y="0.0" width="100.0"
+             text="D1"/>
+  <Component type="ScriptSlider" id="Knob10" x="120.0" y="0.0" width="100.0"
+             text="D2"/>
+  <Component type="ScriptSlider" id="Knob11" x="240.0" y="0.0" width="100.0"
+             text="D3"/>
+  <Component type="ScriptSlider" id="Knob12" x="360.0" y="0.0" width="100.0"
+             text="D4"/>
+  <Component type="ScriptSlider" id="Knob13" x="490.0" y="0.0" width="100.0"
+             text="D5"/>
+</ContentProperties>
