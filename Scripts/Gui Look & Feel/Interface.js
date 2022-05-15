@@ -4,6 +4,11 @@ Content.makeFrontInterface(600, 600);
 const var BounceVerbFx = Synth.getEffect("BounceVerb Fx");
 
 //GUI REFERENCES
+//Panels
+const var BackG = Content.getComponent("Panel1");
+
+
+
 //Main Knobs
 const var Knobs = 
 [
@@ -78,10 +83,6 @@ inline function onSize(component, value)
 	BounceVerbFx.setAttribute(BounceVerbFx.SizeR, value);
 }
 
-
-
-
-
 inline function onRand(component, value)
 {
 	AbstractKnobs[1].setValue(AbstractKnobs[0].getValue() - Knobs[7].getValue());
@@ -97,9 +98,6 @@ inline function onRand(component, value)
 	BounceVerbFx.setAttribute(BounceVerbFx.Size5, AbstractKnobs[3].getValue() - Knobs[7].getValue());
 
 }
-
-
-
 
 inline function onRate(component, value)
 {
@@ -125,7 +123,6 @@ inline function onRate(component, value)
 	
 }
 
-
 inline function onDens(component, value)
 {
 	BounceVerbFx.setAttribute(BounceVerbFx.Density, value);
@@ -137,3 +134,13 @@ inline function onBoost(component, value)
 }
 
  
+ 
+//Paint Routines 
+BackG.setPaintRoutine(function(g)
+{
+	g.fillAll(nBlack);
+	g.setColour(nOffWhite);
+	g.drawRoundedRectangle([20, 260, 560, 130], 2.0, 1.0);
+	g.drawRoundedRectangle([20, 450, 560, 130], 2.0, 1.0);
+	
+});
