@@ -16,12 +16,12 @@
             <Control type="ScriptSlider" id="Knob5" value="0.0"/>
             <Control type="ScriptSlider" id="Knob6" value="0.0"/>
             <Control type="ScriptSlider" id="Knob7" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob8" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob9" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob10" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob11" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob12" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob13" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob8" value="0.009999999776482582"/>
+            <Control type="ScriptSlider" id="Knob9" value="1.0"/>
+            <Control type="ScriptSlider" id="Knob10" value="0.9900000095367432"/>
+            <Control type="ScriptSlider" id="Knob11" value="0.9800000190734863"/>
+            <Control type="ScriptSlider" id="Knob12" value="0.9700000286102295"/>
+            <Control type="ScriptSlider" id="Knob13" value="0.9599999785423279"/>
           </Content>
           <UIData Source="SliderAttachmentsUIData"/>
         </Processor>

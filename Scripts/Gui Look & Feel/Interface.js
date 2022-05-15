@@ -48,25 +48,53 @@ for (i = 0; i < Knobs.length; i++)
 
 
 //Gui Attachments
-
+Knobs[0].setControlCallback(onHold);
+Knobs[1].setControlCallback(onCut);
+Knobs[2].setControlCallback(onStretch);
+Knobs[3].setControlCallback(onSize);
 Knobs[4].setControlCallback(onRate);
+Knobs[5].setControlCallback(onDens);
+Knobs[6].setControlCallback(onBoost);
 Knobs[7].setControlCallback(onRand);
 
-
 //Attachment Functions
+inline function onHold(component, value)
+{
+	BounceVerbFx.setAttribute(BounceVerbFx.Hold, value / 1000);
+}
+
+inline function onCut(component, value)
+{
+	BounceVerbFx.setAttribute(BounceVerbFx.HC, value);
+}
+
+inline function onStretch(component, value)
+{
+	BounceVerbFx.setAttribute(BounceVerbFx.Stretch, value);
+}
+
+inline function onSize(component, value)
+{
+	BounceVerbFx.setAttribute(BounceVerbFx.SizeR, value);
+}
+
+
+
+
+
 inline function onRand(component, value)
 {
-	AbstractKnobs[1].setValue(AbstractKnobs[0].getValue() + Knobs[7].getValue());
-	AbstractKnobs[2].setValue(AbstractKnobs[1].getValue() + Knobs[7].getValue());
-	AbstractKnobs[3].setValue(AbstractKnobs[2].getValue() + Knobs[7].getValue());
-	AbstractKnobs[4].setValue(AbstractKnobs[3].getValue() + Knobs[7].getValue());
+	AbstractKnobs[1].setValue(AbstractKnobs[0].getValue() - Knobs[7].getValue());
+	AbstractKnobs[2].setValue(AbstractKnobs[1].getValue() - Knobs[7].getValue());
+	AbstractKnobs[3].setValue(AbstractKnobs[2].getValue() - Knobs[7].getValue());
+	AbstractKnobs[4].setValue(AbstractKnobs[3].getValue() - Knobs[7].getValue());
 	
 	BounceVerbFx.setAttribute(BounceVerbFx.Size1, AbstractKnobs[0].getValue());
 	
-	BounceVerbFx.setAttribute(BounceVerbFx.Size2, AbstractKnobs[0].getValue() + Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size3, AbstractKnobs[1].getValue() + Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size4, AbstractKnobs[2].getValue() + Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size5, AbstractKnobs[3].getValue() + Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size2, AbstractKnobs[0].getValue() - Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size3, AbstractKnobs[1].getValue() - Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size4, AbstractKnobs[2].getValue() - Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size5, AbstractKnobs[3].getValue() - Knobs[7].getValue());
 
 }
 
@@ -75,18 +103,18 @@ inline function onRand(component, value)
 
 inline function onRate(component, value)
 {
-	AbstractKnobs[0].setValue(Knobs[4].getValue());
-	AbstractKnobs[1].setValue(AbstractKnobs[0].getValue() + Knobs[7].getValue());
-	AbstractKnobs[2].setValue(AbstractKnobs[1].getValue() + Knobs[7].getValue());
-	AbstractKnobs[3].setValue(AbstractKnobs[2].getValue() + Knobs[7].getValue());
-	AbstractKnobs[4].setValue(AbstractKnobs[3].getValue() + Knobs[7].getValue());
+	AbstractKnobs[0].setValue(1.0 - Knobs[4].getValue());
+	AbstractKnobs[1].setValue(AbstractKnobs[0].getValue() - Knobs[7].getValue());
+	AbstractKnobs[2].setValue(AbstractKnobs[1].getValue() - Knobs[7].getValue());
+	AbstractKnobs[3].setValue(AbstractKnobs[2].getValue() - Knobs[7].getValue());
+	AbstractKnobs[4].setValue(AbstractKnobs[3].getValue() - Knobs[7].getValue());
 	
 	BounceVerbFx.setAttribute(BounceVerbFx.Size1, AbstractKnobs[0].getValue());
 		
-	BounceVerbFx.setAttribute(BounceVerbFx.Size2, AbstractKnobs[0].getValue() + Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size3, AbstractKnobs[1].getValue() + Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size4, AbstractKnobs[2].getValue() + Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size5, AbstractKnobs[3].getValue() + Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size2, AbstractKnobs[0].getValue() - Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size3, AbstractKnobs[1].getValue() - Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size4, AbstractKnobs[2].getValue() - Knobs[7].getValue());
+	BounceVerbFx.setAttribute(BounceVerbFx.Size5, AbstractKnobs[3].getValue() - Knobs[7].getValue());
 	
 
 	
@@ -98,25 +126,14 @@ inline function onRate(component, value)
 }
 
 
+inline function onDens(component, value)
+{
+	BounceVerbFx.setAttribute(BounceVerbFx.Density, value);
+}
 
-function onNoteOn()
+inline function onBoost(component, value)
 {
-	
+	BounceVerbFx.setAttribute(BounceVerbFx.Reflectivity, value);
 }
- function onNoteOff()
-{
-	
-}
- function onController()
-{
-	
-}
- function onTimer()
-{
-	
-}
- function onControl(number, value)
-{
-	
-}
+
  
