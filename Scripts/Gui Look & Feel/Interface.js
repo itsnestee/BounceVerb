@@ -1,12 +1,19 @@
-Content.makeFrontInterface(600, 600);
+Content.makeFrontInterface(800, 700);
 
 //DSP
-const var BounceVerbFx = Synth.getEffect("BounceVerb Fx");
+const var BounceFx = Synth.getEffect("BounceFx");
 
+const var VerbFx = Synth.getEffect("VerbFx");
 //GUI REFERENCES
 //Panels
 const var BackG = Content.getComponent("Panel1");
 
+//Buttons
+const var Buttons = 
+[
+    Content.getComponent("Button1"),
+    Content.getComponent("Button2")
+];
 
 
 //Main Knobs
@@ -19,7 +26,11 @@ const var Knobs =
   Content.getComponent("Knob5"),
   Content.getComponent("Knob6"),
   Content.getComponent("Knob7"),
-  Content.getComponent("Knob8")
+  Content.getComponent("Knob8"),
+  Content.getComponent("Knob14"),
+  Content.getComponent("Knob15")
+  
+  
 ];
 
 //AbstractKnobs
@@ -42,7 +53,9 @@ const var Labels =
   Content.getComponent("Label5"),
   Content.getComponent("Label6"),
   Content.getComponent("Label7"),
-  Content.getComponent("Label8")
+  Content.getComponent("Label8"),
+  Content.getComponent("Label9"),
+  Content.getComponent("Label10")
 ];
 
 //Naming Labels
@@ -61,26 +74,31 @@ Knobs[4].setControlCallback(onRate);
 Knobs[5].setControlCallback(onDens);
 Knobs[6].setControlCallback(onBoost);
 Knobs[7].setControlCallback(onRand);
+Knobs[8].setControlCallback(onDry);
+Knobs[9].setControlCallback(onWet);
+Buttons[0].setControlCallback(onVerb);
+Buttons[1].setControlCallback(onBounce);
+
 
 //Attachment Functions
 inline function onHold(component, value)
 {
-	BounceVerbFx.setAttribute(BounceVerbFx.Hold, value / 1000);
+	VerbFx.setAttribute(VerbFx.Holdup, value);
 }
 
 inline function onCut(component, value)
 {
-	BounceVerbFx.setAttribute(BounceVerbFx.HC, value);
+	VerbFx.setAttribute(VerbFx.Swallow, value);
 }
 
 inline function onStretch(component, value)
 {
-	BounceVerbFx.setAttribute(BounceVerbFx.Stretch, value);
+	VerbFx.setAttribute(VerbFx.Stretch, value);
 }
 
 inline function onSize(component, value)
 {
-	BounceVerbFx.setAttribute(BounceVerbFx.SizeR, value);
+	VerbFx.setAttribute(VerbFx.Size, value);
 }
 
 inline function onRand(component, value)
@@ -90,12 +108,12 @@ inline function onRand(component, value)
 	AbstractKnobs[3].setValue(AbstractKnobs[2].getValue() - Knobs[7].getValue());
 	AbstractKnobs[4].setValue(AbstractKnobs[3].getValue() - Knobs[7].getValue());
 	
-	BounceVerbFx.setAttribute(BounceVerbFx.Size1, AbstractKnobs[0].getValue());
+	BounceFx.setAttribute(BounceFx.Size1, AbstractKnobs[0].getValue());
 	
-	BounceVerbFx.setAttribute(BounceVerbFx.Size2, AbstractKnobs[0].getValue() - Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size3, AbstractKnobs[1].getValue() - Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size4, AbstractKnobs[2].getValue() - Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size5, AbstractKnobs[3].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size2, AbstractKnobs[0].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size3, AbstractKnobs[1].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size4, AbstractKnobs[2].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size5, AbstractKnobs[3].getValue() - Knobs[7].getValue());
 
 }
 
@@ -107,12 +125,12 @@ inline function onRate(component, value)
 	AbstractKnobs[3].setValue(AbstractKnobs[2].getValue() - Knobs[7].getValue());
 	AbstractKnobs[4].setValue(AbstractKnobs[3].getValue() - Knobs[7].getValue());
 	
-	BounceVerbFx.setAttribute(BounceVerbFx.Size1, AbstractKnobs[0].getValue());
+	BounceFx.setAttribute(BounceFx.Size1, AbstractKnobs[0].getValue());
 		
-	BounceVerbFx.setAttribute(BounceVerbFx.Size2, AbstractKnobs[0].getValue() - Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size3, AbstractKnobs[1].getValue() - Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size4, AbstractKnobs[2].getValue() - Knobs[7].getValue());
-	BounceVerbFx.setAttribute(BounceVerbFx.Size5, AbstractKnobs[3].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size2, AbstractKnobs[0].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size3, AbstractKnobs[1].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size4, AbstractKnobs[2].getValue() - Knobs[7].getValue());
+	BounceFx.setAttribute(BounceFx.Size5, AbstractKnobs[3].getValue() - Knobs[7].getValue());
 	
 
 	
@@ -125,22 +143,43 @@ inline function onRate(component, value)
 
 inline function onDens(component, value)
 {
-	BounceVerbFx.setAttribute(BounceVerbFx.Density, value);
+	BounceFx.setAttribute(BounceFx.Density, value);
 }
 
 inline function onBoost(component, value)
 {
-	BounceVerbFx.setAttribute(BounceVerbFx.Reflectivity, value);
+	BounceFx.setAttribute(BounceFx.Reflectivity, value);
 }
 
+inline function onVerb(component, value)
+{
+	VerbFx.setBypassed(value -1);
+}
+
+inline function onBounce(component, value)
+{
+	BounceFx.setBypassed(value -1);
+}
+
+inline function onDry(component, value)
+{
+	VerbFx.setAttribute(VerbFx.VerbDry, value);
+	BounceFx.setAttribute(BounceFx.BounceDry, value);
+}
  
+inline function onWet(component, value)
+{
+	VerbFx.setAttribute(VerbFx.Dw, value);
+	BounceFx.setAttribute(BounceFx.Parameter, value);
+}
  
 //Paint Routines 
 BackG.setPaintRoutine(function(g)
 {
 	g.fillAll(nBlack);
 	g.setColour(nOffWhite);
-	g.drawRoundedRectangle([20, 260, 560, 130], 2.0, 1.0);
-	g.drawRoundedRectangle([20, 450, 560, 130], 2.0, 1.0);
+	//g.drawRoundedRectangle([20, 260, 560, 130], 2.0, 1.0);
+	//g.drawRoundedRectangle([20, 450, 560, 130], 2.0, 1.0);
 	
 });
+
