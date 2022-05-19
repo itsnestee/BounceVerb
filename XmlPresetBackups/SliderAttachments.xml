@@ -11,11 +11,11 @@
           <Content>
             <Control type="ScriptSlider" id="Knob1" value="0.0"/>
             <Control type="ScriptSlider" id="Knob2" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob3" value="0.05000000074505806"/>
-            <Control type="ScriptSlider" id="Knob4" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob3" value="0.75"/>
+            <Control type="ScriptSlider" id="Knob4" value="0.8799999952316284"/>
             <Control type="ScriptSlider" id="Knob5" value="0.0"/>
             <Control type="ScriptSlider" id="Knob6" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob7" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob7" value="0.009999999776482582"/>
             <Control type="ScriptSlider" id="Knob8" value="0.0"/>
             <Control type="ScriptSlider" id="Knob14" value="0.0"/>
             <Control type="ScriptSlider" id="Knob15" value="0.0"/>

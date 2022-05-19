@@ -60,8 +60,10 @@
              text="D4" visible="0"/>
   <Component type="ScriptSlider" id="Knob13" x="490.0" y="0.0" width="100.0"
              text="D5" visible="0"/>
-  <Component type="ScriptButton" id="Button1" x="120.0" y="320.0" text="VERB"
+  <Component type="ScriptButton" id="Button1" x="500.0" y="510.0" text="VERB"
              width="150.0" height="30.0"/>
   <Component type="ScriptButton" id="Button2" x="120.0" y="510.0" text="BOUNCE"
              width="150.0" height="30.0"/>
+  <Component type="ScriptPanel" id="Panel2" x="0.0" y="30.0" width="800.0"
+             height="280.0" borderSize="0.0" borderRadius="0.0"/>
 </ContentProperties>
