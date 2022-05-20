@@ -3,6 +3,8 @@
 <ContentProperties DeviceType="Desktop">
   <Component type="ScriptPanel" id="Panel1" x="0.0" y="0.0" width="800.0"
              height="700.0" text="BG" borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptPanel" id="Panel2" x="0.0" y="60.0" width="800.0"
+             height="250.0" borderSize="0.0" borderRadius="0.0"/>
   <Component type="ScriptSlider" id="Knob1" x="140.0" y="390.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="HOLDUP"
              max="1000.0" middlePosition="500.0"/>
@@ -12,7 +14,7 @@
              height="70.0" showValuePopup="Right" showTextBox="0" text="STRETCHX"/>
   <Component type="ScriptSlider" id="Knob4" x="580.0" y="390.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="SIZE"
-             mode="NormalizedPercentage" suffix="%" middlePosition="0.5"/>
+             mode="NormalizedPercentage" suffix="%" middlePosition="0.5" bgColour="3372220415"/>
   <Component type="ScriptSlider" id="Knob5" x="140.0" y="580.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="RATE"
              middlePosition="0.5" mode="NormalizedPercentage" suffix="%"/>
@@ -64,6 +66,8 @@
              width="150.0" height="30.0"/>
   <Component type="ScriptButton" id="Button2" x="120.0" y="510.0" text="BOUNCE"
              width="150.0" height="30.0"/>
-  <Component type="ScriptPanel" id="Panel2" x="0.0" y="30.0" width="800.0"
-             height="280.0" borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptButton" id="Button3" x="0.0" y="5.0" text="NESTEE"
+             isMomentary="1" width="150.0" height="30.0"/>
+  <Component type="ScriptComboBox" id="ComboBox1" x="320.0" y="5.0" max="0"
+             width="150.0" text="Preset"/>
 </ContentProperties>

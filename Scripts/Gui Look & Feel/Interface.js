@@ -9,17 +9,23 @@ const var VerbFx = Synth.getEffect("VerbFx");
 const var BackG = Content.getComponent("Panel1");
 const var GraphFx = Content.getComponent("Panel2");
 
+
+
+
 //Timer
 const var GraphTm = Engine.createTimerObject();
+const var HoldTm = Engine.createTimerObject();
 
 //Buttons
 const var Buttons = 
 [
     Content.getComponent("Button1"),
-    Content.getComponent("Button2")
+    Content.getComponent("Button2"),
+    Content.getComponent("Button3")
 ];
 
 
+//////////////////////////////////////////////////////////////
 //Main Knobs
 const var Knobs = 
 [
@@ -37,6 +43,7 @@ const var Knobs =
   
 ];
 
+///////////////////////////////////////////////////////////////
 //AbstractKnobs
 const var AbstractKnobs = 
 [
@@ -47,6 +54,7 @@ const var AbstractKnobs =
   Content.getComponent("Knob13")
 ];
 
+///////////////////////////////////////////////////////////////
 //Labels
 const var Labels = 
 [
@@ -62,6 +70,8 @@ const var Labels =
   Content.getComponent("Label10")
 ];
 
+
+//////////////////////////////////////////////////////////////
 //Naming Labels
 for (i = 0; i < Knobs.length; i++)
 {
@@ -69,6 +79,7 @@ for (i = 0; i < Knobs.length; i++)
 }
 
 
+///////////////////////////////////////////////////////////////
 //Gui Attachments
 Knobs[0].setControlCallback(onHold);
 Knobs[1].setControlCallback(onCut);
@@ -82,8 +93,9 @@ Knobs[8].setControlCallback(onDry);
 Knobs[9].setControlCallback(onWet);
 Buttons[0].setControlCallback(onVerb);
 Buttons[1].setControlCallback(onBounce);
+Buttons[2].setControlCallback(onNestee);
 
-
+///////////////////////////////////////////////////////////////
 //Attachment Functions
 inline function onHold(component, value)
 {
@@ -185,11 +197,22 @@ inline function onWet(component, value)
 	BounceFx.setAttribute(BounceFx.Parameter, value);
 }
  
+inline function onNestee(component, value)
+{
+	if (value)
+
+	Engine.openWebsite("https://www.instagram.com/itsnestee/");
+}
+
+/////////////////////////////////////////////////////////////
 //Paint Routines 
 BackG.setPaintRoutine(function(g)
 {
 	g.fillAll(nBlack);
 	g.setColour(nOffWhite);
+	g.drawHorizontalLine(40, 0, 800);
+	g.setFont("Actay Wide", 20);
+	g.drawAlignedText("BOUNCEVERB", [630, 5, 170, 35], "centred");
 	
 });
 
@@ -197,25 +220,34 @@ GraphFx.setPaintRoutine(function(g)
 {
 	reg cx = this.getWidth() / 2;
 	reg cy = this.getHeight() / 2;
-	reg width = (Knobs[2].getValue() * 800) + 1;
-	reg height = (Knobs[3].getValue() * 320) + 1;
+	reg width = (Knobs[2].getValue() * 780) + 1;
+	reg height = (Knobs[3].getValue() * 240) + 1;
 	reg smear = (Knobs[1].getValue() * 100) + 1;
+	reg gradiente = Knobs[0].getValue();
+	var lessW = g.setColour(Colours.darkgrey);
 	
-
 	g.fillAll(nBlack);
-	g.setColour(nOffWhite);
-	
+	//g.setColour(nOffWhite);
+	g.setGradientFill([lessW, gradiente, 0, nOffWhite, 800, 0]);
 	g.fillRoundedRectangle([cx - width / 2, cy - height / 2, width , height ], smear) ;
 	
+
 	g.setColour(Colours.lightseagreen);
 	
 });
 
 
+
+
+
+/////////////////////////////////////////////////////////
+//TIMER
 GraphTm.setTimerCallback(function()
 {
 	GraphFx.repaintImmediately();
 
 });
+
+
 
 
