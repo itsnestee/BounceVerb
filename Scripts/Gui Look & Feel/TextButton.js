@@ -1,5 +1,5 @@
 
-const var laf = Engine.createGlobalScriptLookAndFeel();
+
 laf.registerFunction("drawToggleButton", function(g, obj)
 {
 	

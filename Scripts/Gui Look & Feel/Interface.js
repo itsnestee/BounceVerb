@@ -1,5 +1,7 @@
 Content.makeFrontInterface(800, 700);
 
+const var laf = Engine.createGlobalScriptLookAndFeel();
+
 //DSP
 const var BounceFx = Synth.getEffect("BounceFx");
 
@@ -21,7 +23,8 @@ const var Buttons =
 [
     Content.getComponent("Button1"),
     Content.getComponent("Button2"),
-    Content.getComponent("Button3")
+    Content.getComponent("Button3"),
+    Content.getComponent("Button4")
 ];
 
 
@@ -210,7 +213,7 @@ BackG.setPaintRoutine(function(g)
 {
 	g.fillAll(nBlack);
 	g.setColour(nOffWhite);
-	g.drawHorizontalLine(40, 0, 800);
+//	g.drawHorizontalLine(40, 0, 800);
 	g.setFont("Actay Wide", 20);
 	g.drawAlignedText("BOUNCEVERB", [630, 5, 170, 35], "centred");
 	
@@ -218,6 +221,8 @@ BackG.setPaintRoutine(function(g)
 
 GraphFx.setPaintRoutine(function(g)
 {
+	this.loadImage("{PROJECT_FOLDER}space.png", "space");
+
 	reg cx = this.getWidth() / 2;
 	reg cy = this.getHeight() / 2;
 	reg width = (Knobs[2].getValue() * 780) + 1;
@@ -225,14 +230,17 @@ GraphFx.setPaintRoutine(function(g)
 	reg smear = (Knobs[1].getValue() * 100) + 1;
 	reg gradiente = Knobs[0].getValue();
 	var lessW = g.setColour(Colours.darkgrey);
+	//Knobs[0].getValue() = width + height;
 	
 	g.fillAll(nBlack);
-	//g.setColour(nOffWhite);
-	g.setGradientFill([lessW, gradiente, 0, nOffWhite, 800, 0]);
-	g.fillRoundedRectangle([cx - width / 2, cy - height / 2, width , height ], smear) ;
-	
+	g.setColour(nOffWhite);
 
-	g.setColour(Colours.lightseagreen);
+	g.fillRoundedRectangle([cx - width / 2, cy - height / 2, width , height ], smear);
+	
+	g.setColour(nOffWhite);
+	//g.drawRoundedRectangle([cx - width / 2, cy - height / 2, width , height ], smear, 1.5);
+
+
 	
 });
 

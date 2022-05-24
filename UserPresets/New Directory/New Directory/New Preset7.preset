@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Preset Version="1.0.0">
+  <Content Processor="Interface">
+    <Control type="ScriptButton" id="Button5" value="0.0"/>
+    <Control type="ScriptButton" id="Button6" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob1" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob2" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob3" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob4" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob5" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob6" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob7" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob8" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob14" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob15" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob9" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob10" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob11" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob12" value="0.0"/>
+    <Control type="ScriptSlider" id="Knob13" value="0.0"/>
+    <Control type="ScriptButton" id="Button1" value="0.0"/>
+    <Control type="ScriptButton" id="Button2" value="0.0"/>
+    <Control type="ScriptButton" id="Button3" value="0.0"/>
+    <Control type="ScriptButton" id="Button4" value="0.0"/>
+  </Content>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Preset>

@@ -3,32 +3,48 @@
 <ContentProperties DeviceType="Desktop">
   <Component type="ScriptPanel" id="Panel1" x="0.0" y="0.0" width="800.0"
              height="700.0" text="BG" borderSize="0.0" borderRadius="0.0"/>
-  <Component type="ScriptPanel" id="Panel2" x="0.0" y="60.0" width="800.0"
-             height="250.0" borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptPanel" id="Panel2" x="0.0" y="70.0" width="800" height="240"
+             borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptPanel" id="Panel3" x="160.0" y="0.0" width="470"
+             height="59.0" borderSize="0.0" borderRadius="0.0">
+    <Component type="ScriptButton" id="Button5" x="80.0" y="10.0" parentComponent="Panel3"
+               text="Prev" width="70.0" height="25.0" isMomentary="1"/>
+    <Component type="ScriptButton" id="Button6" x="300.0" y="10.0" parentComponent="Panel3"
+               text="Next" width="70.0" height="25.0" isMomentary="1"/>
+    <Component type="ScriptLabel" id="Label11" x="125.0" y="40.0" parentComponent="Panel3"
+               width="200.0" height="20" editable="0" text="Distant Piano" fontName="Actay Wide"
+               fontSize="15.0"/>
+    <Component type="ScriptPanel" id="Panel4" x="150.0" y="10.0" parentComponent="Panel3"
+               width="150" height="25" allowCallbacks="Context Menu" popupMenuItems="Ambience::Outdoor Drums&#10;Ambience::Aired Vox&#10;Ambience::GrandSpace&#10;Ambience::Distant Piano&#10;Rooms::Teenage Bedroom&#10;Rooms::Studio Closet&#10;Rooms::Coarsed  Area&#10;Fx::SuperBounce&#10;Fx::Randomized Response"
+               popupOnRightClick="0" borderRadius="0.0" borderSize="0.0" popupMenuAlign="1"/>
+  </Component>
   <Component type="ScriptSlider" id="Knob1" x="140.0" y="390.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="HOLDUP"
-             max="1000.0" middlePosition="500.0" tooltip="Ciao" bgColour="0"
-             itemColour2="1118481" itemColour="3355443"/>
+             max="1000.0" middlePosition="500.0" tooltip="Time after the reverb starts"
+             bgColour="0" itemColour2="1118481" itemColour="3355443"/>
   <Component type="ScriptSlider" id="Knob2" x="300.0" y="390.0" width="70.0"
-             height="70.0" showValuePopup="Right" showTextBox="0" text="HIGHCUT"/>
+             height="70.0" showValuePopup="Right" showTextBox="0" text="HIGHCUT"
+             tooltip="Removes all the high frequences in the reverb"/>
   <Component type="ScriptSlider" id="Knob3" x="450.0" y="390.0" width="70.0"
-             height="70.0" showValuePopup="Right" showTextBox="0" text="STRETCHX"/>
+             height="70.0" showValuePopup="Right" showTextBox="0" text="STRETCHX"
+             tooltip="Widenes the  space"/>
   <Component type="ScriptSlider" id="Knob4" x="580.0" y="390.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="SIZE"
-             mode="NormalizedPercentage" suffix="%" middlePosition="0.5" bgColour="3372220415"/>
+             mode="NormalizedPercentage" suffix="%" middlePosition="0.5" bgColour="3372220415"
+             tooltip="Size of the whole space"/>
   <Component type="ScriptSlider" id="Knob5" x="140.0" y="580.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="RATE"
-             middlePosition="0.5" mode="NormalizedPercentage" suffix="%"/>
+             middlePosition="0.5" mode="NormalizedPercentage" suffix="%" tooltip="Amount of times that the sound bounces back "/>
   <Component type="ScriptSlider" id="Knob6" x="300.0" y="580.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="DENSITY"
-             mode="NormalizedPercentage" suffix="%" middlePosition="0.5"/>
+             mode="NormalizedPercentage" suffix="%" middlePosition="0.5" tooltip="Fade Time of the bounce (100% = No fade)"/>
   <Component type="ScriptSlider" id="Knob7" x="450.0" y="580.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="BOOST"
-             mode="NormalizedPercentage" suffix="%" middlePosition="0.5"/>
+             mode="NormalizedPercentage" suffix="%" middlePosition="0.5" tooltip="Gain amount of the bounce"/>
   <Component type="ScriptSlider" id="Knob8" x="590.0" y="580.0" width="70.0"
              height="70.0" showValuePopup="Right" showTextBox="0" text="RANDOMISE"
              mode="NormalizedPercentage" suffix="%" middlePosition="0.119999997317791"
-             max="0.25"/>
+             max="0.25" tooltip="Asincronous bounces"/>
   <Component type="ScriptSlider" id="Knob14" x="50.0" y="390.0" style="Vertical"
              width="20.0" height="250.0" showValuePopup="Above" text="DRY"/>
   <Component type="ScriptSlider" id="Knob15" x="730.0" y="390.0" style="Vertical"
@@ -69,12 +85,10 @@
              width="150.0" height="30.0"/>
   <Component type="ScriptButton" id="Button3" x="0.0" y="5.0" text="NESTEE"
              isMomentary="1" width="150.0" height="30.0"/>
-  <Component type="ScriptButton" id="Button4" x="100.0" y="455.0" width="30"
-             height="30"/>
-  <Component type="ScriptComboBox" id="ComboBox1" x="320.0" y="5.0" max="0"
-             width="150.0" text="Preset"/>
+  <Component type="ScriptButton" id="Button4" x="100.0" y="455.0" width="30.0"
+             height="30.0"/>
   <Component type="ScriptFloatingTile" id="FloatingTile1" x="50.0" y="320.0"
-             width="700" height="30" ContentType="TooltipPanel" bgColour="3684408"
+             width="700.0" height="30.0" ContentType="TooltipPanel" bgColour="3684408"
              itemColour="16777215" itemColour2="0" textColour="3439329279"
              Font="Actay Wide"/>
 </ContentProperties>
