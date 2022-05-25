@@ -211,17 +211,17 @@ inline function onNestee(component, value)
 //Paint Routines 
 BackG.setPaintRoutine(function(g)
 {
-	g.fillAll(nBlack);
+	
 	g.setColour(nOffWhite);
-//	g.drawHorizontalLine(40, 0, 800);
 	g.setFont("Actay Wide", 20);
 	g.drawAlignedText("BOUNCEVERB", [630, 5, 170, 35], "centred");
+
 	
 });
 
 GraphFx.setPaintRoutine(function(g)
 {
-	this.loadImage("{PROJECT_FOLDER}space.png", "space");
+	
 
 	reg cx = this.getWidth() / 2;
 	reg cy = this.getHeight() / 2;
@@ -232,7 +232,7 @@ GraphFx.setPaintRoutine(function(g)
 	var lessW = g.setColour(Colours.darkgrey);
 	//Knobs[0].getValue() = width + height;
 	
-	g.fillAll(nBlack);
+
 	g.setColour(nOffWhite);
 
 	g.fillRoundedRectangle([cx - width / 2, cy - height / 2, width , height ], smear);
