@@ -17,6 +17,8 @@ const var GraphFx = Content.getComponent("Panel2");
 //Timer
 const var GraphTm = Engine.createTimerObject();
 const var HoldTm = Engine.createTimerObject();
+const var knbTimer = Engine.createTimerObject();
+reg compInit = 0;
 
 //Buttons
 const var Buttons = 
@@ -97,16 +99,28 @@ Knobs[9].setControlCallback(onWet);
 Buttons[0].setControlCallback(onVerb);
 Buttons[1].setControlCallback(onBounce);
 Buttons[2].setControlCallback(onNestee);
+Buttons[3].setControlCallback(onSwitchH);
 
 ///////////////////////////////////////////////////////////////
 //Attachment Functions
 inline function onHold(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[0].set("text", Math.round(value * 100) + Knobs[0].get("suffix"));
+	Labels[0].changed();
+	compInit = 1;
+
 	VerbFx.setAttribute(VerbFx.Holdup, value);
 }
 
 inline function onCut(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[1].set("text", Math.round(value * 100) + Knobs[1].get("suffix"));
+	Labels[1].changed();
+
 	GraphTm.startTimer(40);
 
 	VerbFx.setAttribute(VerbFx.Swallow, value);
@@ -114,6 +128,11 @@ inline function onCut(component, value)
 
 inline function onStretch(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[2].set("text", Math.round(value * 100) + Knobs[2].get("suffix"));
+	Labels[2].changed();
+
 	GraphTm.startTimer(40);
 
 	VerbFx.setAttribute(VerbFx.Stretch, value);
@@ -121,6 +140,11 @@ inline function onStretch(component, value)
 
 inline function onSize(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[3].set("text", Math.round(value * 100) + Knobs[3].get("suffix"));
+	Labels[3].changed();
+
 	GraphTm.startTimer(40);
 
 	VerbFx.setAttribute(VerbFx.Size, value);
@@ -128,6 +152,13 @@ inline function onSize(component, value)
 
 inline function onRand(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[7].set("text", Math.round(value * 100) + Knobs[7].get("suffix"));
+	Labels[7].changed();
+
+
+
 	AbstractKnobs[1].setValue(AbstractKnobs[0].getValue() - Knobs[7].getValue());
 	AbstractKnobs[2].setValue(AbstractKnobs[1].getValue() - Knobs[7].getValue());
 	AbstractKnobs[3].setValue(AbstractKnobs[2].getValue() - Knobs[7].getValue());
@@ -144,6 +175,11 @@ inline function onRand(component, value)
 
 inline function onRate(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[4].set("text", Math.round(value * 100) + Knobs[4].get("suffix"));
+	Labels[4].changed();
+
 	AbstractKnobs[0].setValue(1.0 - Knobs[4].getValue());
 	AbstractKnobs[1].setValue(AbstractKnobs[0].getValue() - Knobs[7].getValue());
 	AbstractKnobs[2].setValue(AbstractKnobs[1].getValue() - Knobs[7].getValue());
@@ -168,34 +204,68 @@ inline function onRate(component, value)
 
 inline function onDens(component, value)
 {
-	
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[5].set("text", Math.round(value * 100) + Knobs[5].get("suffix"));
+	Labels[5].changed();
 
 	BounceFx.setAttribute(BounceFx.Density, value);
 }
 
 inline function onBoost(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[6].set("text", Math.round(value * 100) + Knobs[6].get("suffix"));
+	Labels[6].changed();
+
 	BounceFx.setAttribute(BounceFx.Reflectivity, value);
 }
 
 inline function onVerb(component, value)
 {
 	VerbFx.setBypassed(value -1);
+
+		value ? Labels[0].set("textColour", 0xD8FAF9F6 ) : Labels[0].set("textColour", 0x7EFAF9F6 );
+		value ? Labels[1].set("textColour", 0xD8FAF9F6 ) : Labels[1].set("textColour", 0x7EFAF9F6 );
+		value ? Labels[2].set("textColour", 0xD8FAF9F6 ) : Labels[2].set("textColour", 0x7EFAF9F6 );
+		value ? Labels[3].set("textColour", 0xD8FAF9F6 ) : Labels[4].set("textColour", 0x7EFAF9F6 );
+	
 }
 
 inline function onBounce(component, value)
 {
 	BounceFx.setBypassed(value -1);
+	
+			value ? Labels[4].set("textColour", 0xD8FAF9F6 ) : Labels[4].set("textColour", 0x7EFAF9F6 );
+			value ? Labels[5].set("textColour", 0xD8FAF9F6 ) : Labels[5].set("textColour", 0x7EFAF9F6 );
+			value ? Labels[6].set("textColour", 0xD8FAF9F6 ) : Labels[6].set("textColour", 0x7EFAF9F6 );
+			value ? Labels[7].set("textColour", 0xD8FAF9F6 ) : Labels[7].set("textColour", 0x7EFAF9F6 );
+}
+
+inline function onSwitchH(component, value)
+{
+	value ? Labels[0].set("textColour", 0xD8FAF9F6 ) : Labels[0].set("textColour", 0x7EFAF9F6 );
 }
 
 inline function onDry(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[8].set("text", Math.round(value * 100) + Knobs[8].get("suffix"));
+	Labels[8].changed();
+
 	VerbFx.setAttribute(VerbFx.VerbDry, value);
 	BounceFx.setAttribute(BounceFx.BounceDry, value);
 }
  
 inline function onWet(component, value)
 {
+	knbTimer.startTimer(400);
+	if(compInit == 1)
+	Labels[9].set("text", Math.round(value * 100) + Knobs[9].get("suffix"));
+	Labels[9].changed();
+
 	VerbFx.setAttribute(VerbFx.Dw, value);
 	BounceFx.setAttribute(BounceFx.Parameter, value);
 }
@@ -215,6 +285,7 @@ BackG.setPaintRoutine(function(g)
 	g.setColour(nOffWhite);
 	g.setFont("Actay Wide", 20);
 	g.drawAlignedText("BOUNCEVERB", [630, 5, 170, 35], "centred");
+
 
 	
 });
@@ -256,6 +327,31 @@ GraphTm.setTimerCallback(function()
 
 });
 
+knbTimer.setTimerCallback(function()
+{
+	Labels[0].set("text", Knobs[0].get("text"));
+	Labels[0].changed();
+	Labels[1].set("text", Knobs[1].get("text"));
+	Labels[1].changed();
+	Labels[2].set("text", Knobs[2].get("text"));
+	Labels[2].changed();
+	Labels[3].set("text", Knobs[3].get("text"));
+	Labels[3].changed();
+	Labels[4].set("text", Knobs[4].get("text"));
+	Labels[4].changed();
+	Labels[5].set("text", Knobs[5].get("text"));
+	Labels[5].changed();
+	Labels[6].set("text", Knobs[6].get("text"));
+	Labels[6].changed();
+	Labels[8].set("text", Knobs[8].get("text"));
+	Labels[8].changed();
+	Labels[9].set("text", Knobs[8].get("text"));
+	Labels[9].changed();
+	
+	
+	knbTimer.stopTimer();
+
+});
 
 
 

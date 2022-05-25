@@ -11,18 +11,20 @@ laf.registerFunction("drawRotarySlider", function(g, obj)
 		
 		g.setColour(obj.bgColour);
 		g.setOpacity( 1.0 - ((obj.value/1000) * 0.8));
-		g.fillEllipse([1, 65, 4, 4]);
+		g.fillRect([1, 65, 4, 4]);
 		g.setColour(obj.bgColour);
 		g.setOpacity(((obj.value/1000) * 0.8) + 0.2);
-		g.fillEllipse([64, 65, 4, 4]);
+		g.fillRect([64, 65, 4, 4]);
 		
 		
 		g.setColour(nOffWhite);
+		g.setOpacity(0.6);
 		g.drawEllipse([1, 1, a[2] - 2, a[3] - 2], 2.5);
 		
 		g.rotate(end, [a[2] / 2, a[3] / 2]);
 		 g.setColour(nOffWhite);
-		g.fillEllipse([a[2] / 2 - 7 / 2, 7, 7, 7]);
+		 g.setOpacity(0.6);
+		g.fillRect([a[2] / 2 - 2 / 2, 2, 2, 20]);
 		
 		
 		
@@ -40,18 +42,20 @@ laf.registerFunction("drawRotarySlider", function(g, obj)
 		
 		g.setColour(obj.bgColour);
 		g.setOpacity( 1.0 - (obj.value * 0.8));
-		g.fillEllipse([1, 65, 4, 4]);
+		g.fillRect([1, 65, 4, 4]);
 		g.setColour(obj.bgColour);
 		g.setOpacity((obj.value * 0.8) + 0.2);
-		g.fillEllipse([64, 65, 4, 4]);
+		g.fillRect([64, 65, 4, 4]);
 		
 		
 		g.setColour(nOffWhite);
+		g.setOpacity(0.6);
 		g.drawEllipse([1, 1, a[2] - 2, a[3] - 2], 2.5);
 		
 		g.rotate(end, [a[2] / 2, a[3] / 2]);
 		    g.setColour(nOffWhite);
-		g.fillEllipse([a[2] / 2 - 7 / 2, 7, 7, 7]);
+		    g.setOpacity(0.6);
+		g.fillRect([a[2] / 2 - 2 / 2, 2, 2, 20]);
 		
 		
 		
