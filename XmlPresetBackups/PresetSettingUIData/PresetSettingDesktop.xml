@@ -10,7 +10,8 @@
              height="240.0" borderSize="0.0" borderRadius="0.0" itemColour="0"
              itemColour2="0" saveInPreset="1"/>
   <Component type="ScriptPanel" id="Panel3" x="175.0" y="0.0" width="470.0"
-             height="59.0" borderSize="0.0" borderRadius="0.0">
+             height="59.0" borderSize="0.0" borderRadius="0.0" bgColour="0"
+             itemColour="0" itemColour2="0" textColour="0">
     <Component type="ScriptButton" id="Button5" x="80.0" y="10.0" parentComponent="Panel3"
                text="Prev" width="70.0" height="25.0" isMomentary="1" saveInPreset="0"/>
     <Component type="ScriptButton" id="Button6" x="300.0" y="10.0" parentComponent="Panel3"
