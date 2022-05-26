@@ -4,9 +4,9 @@
   <Name value="BounceVerb"/>
   <Version value="1.0.0"/>
   <Description value=""/>
-  <BundleIdentifier value="com.myCompany.product"/>
-  <PluginCode value="Abcd"/>
-  <EmbedAudioFiles value="Yes"/>
+  <BundleIdentifier value="com.Nestee.BounceVerb"/>
+  <PluginCode value="Bncv"/>
+  <EmbedAudioFiles value="1"/>
   <EmbedImageFiles value="Yes"/>
   <SupportFullDynamicsHLAC value="No"/>
   <AdditionalDspLibraries value=""/>
@@ -19,10 +19,10 @@
   <AppGroupID value=""/>
   <RedirectSampleFolder value=""/>
   <AAXCategoryFX value="AAX_ePlugInCategory_Modulation"/>
-  <SupportMonoFX value="No"/>
+  <SupportMonoFX value="1"/>
   <EnableMidiInputFX value="No"/>
   <EnableSoundGeneratorsFX value="No"/>
-  <VST3Support value="No"/>
+  <VST3Support value="1"/>
   <UseRawFrontend value="No"/>
   <ExpansionType value="Disabled"/>
   <EncryptionKey value=""/>

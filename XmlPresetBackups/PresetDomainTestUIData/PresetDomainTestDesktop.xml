@@ -8,13 +8,13 @@
              bgColour="0" itemColour="0" itemColour2="0" textColour="0"/>
   <Component type="ScriptPanel" id="Panel2" x="0.0" y="70.0" width="800.0"
              height="240.0" borderSize="0.0" borderRadius="0.0" itemColour="0"
-             itemColour2="0"/>
+             itemColour2="0" saveInPreset="1"/>
   <Component type="ScriptPanel" id="Panel3" x="175.0" y="0.0" width="470.0"
              height="59.0" borderSize="0.0" borderRadius="0.0">
     <Component type="ScriptButton" id="Button5" x="80.0" y="10.0" parentComponent="Panel3"
-               text="Prev" width="70.0" height="25.0" isMomentary="1"/>
+               text="Prev" width="70.0" height="25.0" isMomentary="1" saveInPreset="0"/>
     <Component type="ScriptButton" id="Button6" x="300.0" y="10.0" parentComponent="Panel3"
-               text="Next" width="70.0" height="25.0" isMomentary="1"/>
+               text="Next" width="70.0" height="25.0" isMomentary="1" saveInPreset="0"/>
     <Component type="ScriptLabel" id="Label11" x="125.0" y="40.0" parentComponent="Panel3"
                width="200.0" height="20.0" editable="0" text="Randomized Response"
                fontName="Actay Wide" fontSize="15.0"/>
@@ -25,41 +25,43 @@
   <Component type="ScriptSlider" id="Knob1" x="140.0" y="400.0" width="70.0"
              height="70.0" showTextBox="0" text="HOLDUP" max="1000.0" middlePosition="500.0"
              tooltip="Time before the reverb starts" bgColour="16447990" itemColour2="1118481"
-             itemColour="3355443" suffix="ms" defaultValue="0.5"/>
+             itemColour="3355443" suffix="ms" defaultValue="0.5" isPluginParameter="1"
+             pluginParameterName="HUPar"/>
   <Component type="ScriptSlider" id="Knob2" x="300.0" y="400.0" width="70.0"
              height="70.0" showTextBox="0" text="HIGHCUT" tooltip="Removes all the high frequences in the reverb"
-             suffix="%" defaultValue="0.5"/>
+             suffix="%" defaultValue="0.5" isPluginParameter="1" pluginParameterName="HCPar"/>
   <Component type="ScriptSlider" id="Knob3" x="450.0" y="400.0" width="70.0"
              height="70.0" showTextBox="0" text="STRETCHX" tooltip="Widens the  space"
-             suffix="%" defaultValue="0.5"/>
+             suffix="%" defaultValue="0.5" isPluginParameter="1" pluginParameterName="SXPar"/>
   <Component type="ScriptSlider" id="Knob4" x="580.0" y="400.0" width="70.0"
              height="70.0" showTextBox="0" text="SIZE" mode="NormalizedPercentage"
              suffix="%" middlePosition="0.5" bgColour="3372220415" tooltip="Size of the whole space"
-             defaultValue="0.5"/>
+             defaultValue="0.5" isPluginParameter="1" pluginParameterName="SZPar"/>
   <Component type="ScriptSlider" id="Knob5" x="140.0" y="580.0" width="70.0"
              height="70.0" showTextBox="0" text="RATE" middlePosition="0.5"
              mode="NormalizedPercentage" suffix="%" tooltip="Amount of times that the sound bounces back "
-             defaultValue="0.5"/>
+             defaultValue="0.5" isPluginParameter="1" pluginParameterName="RTPar"/>
   <Component type="ScriptSlider" id="Knob6" x="300.0" y="580.0" width="70.0"
              height="70.0" showTextBox="0" text="DENSITY" mode="NormalizedPercentage"
              suffix="%" middlePosition="0.5" tooltip="Fade Time of the bounce (100% = No fade)"
-             defaultValue="0.5"/>
+             defaultValue="0.5" isPluginParameter="1" pluginParameterName="DTPar"/>
   <Component type="ScriptSlider" id="Knob7" x="450.0" y="580.0" width="70.0"
              height="70.0" showTextBox="0" text="BOOST" mode="NormalizedPercentage"
              suffix="%" middlePosition="0.5" tooltip="Gain amount of the bounce"
-             defaultValue="0.5"/>
+             defaultValue="0.5" isPluginParameter="1" pluginParameterName="BSPar"/>
   <Component type="ScriptSlider" id="Knob8" x="590.0" y="580.0" width="70.0"
              height="70.0" showTextBox="0" text="RANDOMISE" mode="NormalizedPercentage"
              suffix="%" middlePosition="0.119999997317791" max="0.25" tooltip="Asincronous bounces"
-             defaultValue="0.119999997317791"/>
+             defaultValue="0.119999997317791" isPluginParameter="1" pluginParameterName="RDPar"/>
   <Component type="ScriptSlider" id="Knob14" x="50.0" y="390.0" style="Vertical"
              width="20.0" height="250.0" text="DRY" textColour="0" bgColour="2100704822"
              itemColour="3522886134" itemColour2="4216410449" tooltip="Dry audio signal amount"
-             suffix="%"/>
+             suffix="%" isPluginParameter="1" pluginParameterName="DRPar"/>
   <Component type="ScriptSlider" id="Knob15" x="730.0" y="390.0" style="Vertical"
              width="20.0" height="250.0" text="WET" bgColour="2100704822"
              itemColour="3522886134" itemColour2="4216410449" textColour="0"
-             tooltip="Wet audio signal amount" suffix="%"/>
+             tooltip="Wet audio signal amount" suffix="%" isPluginParameter="1"
+             pluginParameterName="WTPar"/>
   <Component type="ScriptLabel" id="Label1" x="110.0" y="470.0" fontName="Actay Wide"
              text="HOLDUP" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label2" x="270.0" y="470.0" text="HIGHCUT"
@@ -69,16 +71,16 @@
   <Component type="ScriptLabel" id="Label4" x="550.0" y="470.0" text="SIZE"
              fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label5" x="110.0" y="650.0" text="RATE"
-             fontName="Actay Wide" textColour="2130377206"/>
+             fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label6" x="270.0" y="650.0" text="DENSITY"
-             fontName="Actay Wide" textColour="2130377206"/>
+             fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label7" x="420.0" y="650.0" text="BOOST"
-             fontName="Actay Wide" textColour="2130377206"/>
-  <Component type="ScriptLabel" id="Label8" x="560.0" y="650.0" text="7%"
-             fontName="Actay Wide" textColour="2130377206"/>
+             fontName="Actay Wide" textColour="3640326646"/>
+  <Component type="ScriptLabel" id="Label8" x="560.0" y="650.0" text="RANDOMISE"
+             fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label9" x="0.0" y="650.0" text="DRY" fontName="Actay Wide"
              width="120.0"/>
-  <Component type="ScriptLabel" id="Label10" x="680.0" y="650.0" text="DRY"
+  <Component type="ScriptLabel" id="Label10" x="680.0" y="650.0" text="WET"
              fontName="Actay Wide" width="120.0"/>
   <Component type="ScriptSlider" id="Knob9" x="0.0" y="0.0" width="100.0"
              text="D1" visible="0"/>
@@ -91,13 +93,15 @@
   <Component type="ScriptSlider" id="Knob13" x="490.0" y="0.0" width="100.0"
              text="D5" visible="0"/>
   <Component type="ScriptButton" id="Button1" x="100.0" y="360.0" text="VERB"
-             width="150.0" height="30.0" tooltip="Activates Verb Fx"/>
+             width="150.0" height="30.0" tooltip="Activates Verb Fx" isPluginParameter="1"
+             pluginParameterName="VBPar"/>
   <Component type="ScriptButton" id="Button2" x="100.0" y="530.0" text="BOUNCE"
-             width="150.0" height="30.0" tooltip="Activates Bounce Fx"/>
+             width="150.0" height="30.0" tooltip="Activates Bounce Fx" isPluginParameter="1"
+             pluginParameterName="BCPar"/>
   <Component type="ScriptButton" id="Button3" x="0.0" y="5.0" text="NESTEE"
-             isMomentary="1" width="150.0" height="30.0"/>
+             isMomentary="1" width="150.0" height="30.0" saveInPreset="0"/>
   <Component type="ScriptButton" id="Button4" x="100.0" y="474.0" width="40.0"
-             height="20.0" text="H"/>
+             height="20.0" text="H" enabled="0" visible="0"/>
   <Component type="ScriptFloatingTile" id="FloatingTile1" x="50.0" y="320.0"
              width="700.0" height="30.0" ContentType="TooltipPanel" bgColour="3684408"
              itemColour="16777215" itemColour2="0" textColour="3439329279"

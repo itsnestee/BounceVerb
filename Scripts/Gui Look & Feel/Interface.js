@@ -1,11 +1,14 @@
 Content.makeFrontInterface(800, 700);
+Synth.deferCallbacks(true);
 
 const var laf = Engine.createGlobalScriptLookAndFeel();
 
 //DSP
 const var BounceFx = Synth.getEffect("BounceFx");
 
+
 const var VerbFx = Synth.getEffect("VerbFx");
+
 //GUI REFERENCES
 //Panels
 const var BackG = Content.getComponent("Panel1");
@@ -245,7 +248,9 @@ inline function onBounce(component, value)
 
 inline function onSwitchH(component, value)
 {
-	value ? Labels[0].set("textColour", 0xD8FAF9F6 ) : Labels[0].set("textColour", 0x7EFAF9F6 );
+	//VerbFx.setAttribute(VerbFx.jDelay, float newValue)
+
+	//value ? Labels[0].set("textColour", 0xD8FAF9F6 ) : Labels[0].set("textColour", 0x7EFAF9F6 );
 }
 
 inline function onDry(component, value)
@@ -343,9 +348,11 @@ knbTimer.setTimerCallback(function()
 	Labels[5].changed();
 	Labels[6].set("text", Knobs[6].get("text"));
 	Labels[6].changed();
+	Labels[7].set("text", Knobs[7].get("text"));
+	Labels[7].changed();
 	Labels[8].set("text", Knobs[8].get("text"));
 	Labels[8].changed();
-	Labels[9].set("text", Knobs[8].get("text"));
+	Labels[9].set("text", Knobs[9].get("text"));
 	Labels[9].changed();
 	
 	
