@@ -29,7 +29,6 @@ const var Buttons =
     Content.getComponent("Button1"),
     Content.getComponent("Button2"),
     Content.getComponent("Button3"),
-    Content.getComponent("Button4")
 ];
 
 
@@ -102,7 +101,8 @@ Knobs[9].setControlCallback(onWet);
 Buttons[0].setControlCallback(onVerb);
 Buttons[1].setControlCallback(onBounce);
 Buttons[2].setControlCallback(onNestee);
-Buttons[3].setControlCallback(onSwitchH);
+
+
 
 ///////////////////////////////////////////////////////////////
 //Attachment Functions
@@ -110,7 +110,7 @@ inline function onHold(component, value)
 {
 	knbTimer.startTimer(400);
 	if(compInit == 1)
-	Labels[0].set("text", Math.round(value * 100) + Knobs[0].get("suffix"));
+	Labels[0].set("text", Math.round(value) + Knobs[0].get("suffix"));
 	Labels[0].changed();
 	compInit = 1;
 
@@ -232,7 +232,7 @@ inline function onVerb(component, value)
 		value ? Labels[0].set("textColour", 0xD8FAF9F6 ) : Labels[0].set("textColour", 0x7EFAF9F6 );
 		value ? Labels[1].set("textColour", 0xD8FAF9F6 ) : Labels[1].set("textColour", 0x7EFAF9F6 );
 		value ? Labels[2].set("textColour", 0xD8FAF9F6 ) : Labels[2].set("textColour", 0x7EFAF9F6 );
-		value ? Labels[3].set("textColour", 0xD8FAF9F6 ) : Labels[4].set("textColour", 0x7EFAF9F6 );
+		value ? Labels[3].set("textColour", 0xD8FAF9F6 ) : Labels[3].set("textColour", 0x7EFAF9F6 );
 	
 }
 
@@ -246,12 +246,7 @@ inline function onBounce(component, value)
 			value ? Labels[7].set("textColour", 0xD8FAF9F6 ) : Labels[7].set("textColour", 0x7EFAF9F6 );
 }
 
-inline function onSwitchH(component, value)
-{
-	//VerbFx.setAttribute(VerbFx.jDelay, float newValue)
 
-	//value ? Labels[0].set("textColour", 0xD8FAF9F6 ) : Labels[0].set("textColour", 0x7EFAF9F6 );
-}
 
 inline function onDry(component, value)
 {
@@ -278,9 +273,10 @@ inline function onWet(component, value)
 inline function onNestee(component, value)
 {
 	if (value)
-
-	Engine.openWebsite("https://www.instagram.com/itsnestee/");
+		Engine.openWebsite("https://www.instagram.com/itsnestee/");
 }
+
+
 
 /////////////////////////////////////////////////////////////
 //Paint Routines 
@@ -290,34 +286,19 @@ BackG.setPaintRoutine(function(g)
 	g.setColour(nOffWhite);
 	g.setFont("Actay Wide", 20);
 	g.drawAlignedText("BOUNCEVERB", [630, 5, 170, 35], "centred");
-
-
-	
 });
 
 GraphFx.setPaintRoutine(function(g)
 {
-	
-
 	reg cx = this.getWidth() / 2;
 	reg cy = this.getHeight() / 2;
 	reg width = (Knobs[2].getValue() * 780) + 1;
 	reg height = (Knobs[3].getValue() * 240) + 1;
 	reg smear = (Knobs[1].getValue() * 100) + 1;
-	reg gradiente = Knobs[0].getValue();
-	var lessW = g.setColour(Colours.darkgrey);
-	//Knobs[0].getValue() = width + height;
-	
 
 	g.setColour(nOffWhite);
-
 	g.fillRoundedRectangle([cx - width / 2, cy - height / 2, width , height ], smear);
-	
 	g.setColour(nOffWhite);
-	//g.drawRoundedRectangle([cx - width / 2, cy - height / 2, width , height ], smear, 1.5);
-
-
-	
 });
 
 

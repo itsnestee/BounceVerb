@@ -37,6 +37,7 @@ const var Label11 = Content.getComponent("Label11");
 const var Panel4 = Content.getComponent("Panel4");
 const var Next = Content.getComponent("Button6");
 const var Prev = Content.getComponent("Button5");
+const var PrList = Engine.getUserPresetList();
 
 //Component Properties
 Content.setPropertiesFromJSON("Panel4", {
@@ -94,9 +95,9 @@ inline function onPanel4Control(component, value)
         Label11.set("text", t2);
     
         Console.print("Selected Item ID: " + value);
-        local arr = Engine.getUserPresetList();
+      
         
-        Engine.loadUserPreset(arr[value - 1]);
+        Engine.loadUserPreset(PrList[value - 1]);
     }
 };
 
