@@ -44,7 +44,7 @@ Content.setPropertiesFromJSON("Panel4", {
     "width": 150,
     "height": 25,
     "popupMenuItems":
-    "Ambience::Outdoor Drums\nAmbience::Aired Vox\nAmbience::GrandSpace\nAmbience::Distant Piano\nRooms::Teenage Bedroom\nRooms::Studio Closet\nRooms::Coarsed  Area\nFx::SuperBounce\nFx::Randomized Response",
+    "Ambience::Outdoor Drums\nAmbience::Aired Vox\nAmbience::GrandSpace \nAmbience::Distance Piano\nRooms::Teenage Bedroom\nRooms::Studio Closet \nRooms::Coarsed Area\nFx::SuperBounce\nFx::Randomised Response",
     "allowCallbacks": "Context Menu",
     "popupMenuAlign": true,
     "popupOnRightClick": false

@@ -17,10 +17,10 @@
     <Component type="ScriptButton" id="Button6" x="300.0" y="10.0" parentComponent="Panel3"
                text="Next" width="70.0" height="25.0" isMomentary="1" saveInPreset="0"/>
     <Component type="ScriptLabel" id="Label11" x="125.0" y="40.0" parentComponent="Panel3"
-               width="200.0" height="20.0" editable="0" text="Distant Piano"
-               fontName="Actay Wide" fontSize="15.0"/>
+               width="200.0" height="20.0" editable="0" text="GrandSpace " fontName="Actay Wide"
+               fontSize="15.0"/>
     <Component type="ScriptPanel" id="Panel4" x="150.0" y="10.0" parentComponent="Panel3"
-               width="150" height="25" allowCallbacks="Context Menu" popupMenuItems="Ambience::Outdoor Drums&#10;Ambience::Aired Vox&#10;Ambience::GrandSpace&#10;Ambience::Distant Piano&#10;Rooms::Teenage Bedroom&#10;Rooms::Studio Closet&#10;Rooms::Coarsed  Area&#10;Fx::SuperBounce&#10;Fx::Randomized Response"
+               width="150" height="25" allowCallbacks="Context Menu" popupMenuItems="Ambience::Outdoor Drums&#10;Ambience::Aired Vox&#10;Ambience::GrandSpace &#10;Ambience::Distance Piano&#10;Rooms::Teenage Bedroom&#10;Rooms::Studio Closet &#10;Rooms::Coarsed Area&#10;Fx::SuperBounce&#10;Fx::Randomised Response"
                popupOnRightClick="0" borderRadius="0.0" borderSize="0.0" popupMenuAlign="1"/>
   </Component>
   <Component type="ScriptSlider" id="Knob1" x="140.0" y="400.0" width="70.0"
@@ -73,13 +73,13 @@
   <Component type="ScriptLabel" id="Label4" x="550.0" y="470.0" text="SIZE"
              fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label5" x="110.0" y="650.0" text="RATE"
-             fontName="Actay Wide" textColour="2130377206"/>
+             fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label6" x="270.0" y="650.0" text="DENSITY"
-             fontName="Actay Wide" textColour="2130377206"/>
+             fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label7" x="420.0" y="650.0" text="BOOST"
-             fontName="Actay Wide" textColour="2130377206"/>
+             fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label8" x="560.0" y="650.0" text="METALLIZER"
-             fontName="Actay Wide" textColour="2130377206"/>
+             fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label9" x="0.0" y="650.0" text="DRY" fontName="Actay Wide"
              width="120.0"/>
   <Component type="ScriptLabel" id="Label10" x="680.0" y="650.0" text="WET"
