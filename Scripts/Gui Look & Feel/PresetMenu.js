@@ -97,7 +97,7 @@ inline function onPanel4Control(component, value)
         Console.print("Selected Item ID: " + value);
       
         
-        Engine.loadUserPreset(PrList[value - 1]);
+        //Engine.loadUserPreset(PrList[value - 1]);
     }
 };
 
@@ -112,7 +112,7 @@ inline function onPrevControl(component, value)
             
             Panel4.setValue(items.length +1);
         }
-        
+        Engine.loadUserPreset(PrList[value - 1]);
         Panel4.setValue(Panel4.getValue() - 1);
 	    Panel4.changed();
     }
@@ -130,7 +130,7 @@ inline function onNextControl(component, value)
         {
             Panel4.setValue(0);
         }
-        
+        Engine.loadUserPreset(PrList[value + 1]);
         Panel4.setValue(Panel4.getValue() + 1);
 	    Panel4.changed();
     }
