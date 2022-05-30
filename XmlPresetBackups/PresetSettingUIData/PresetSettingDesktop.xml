@@ -17,7 +17,7 @@
     <Component type="ScriptButton" id="Button6" x="300.0" y="10.0" parentComponent="Panel3"
                text="Next" width="70.0" height="25.0" isMomentary="1" saveInPreset="0"/>
     <Component type="ScriptLabel" id="Label11" x="125.0" y="40.0" parentComponent="Panel3"
-               width="200.0" height="20.0" editable="0" text="GrandSpace " fontName="Actay Wide"
+               width="200.0" height="20.0" editable="0" text="SuperBounce" fontName="Actay Wide"
                fontSize="15.0"/>
     <Component type="ScriptPanel" id="Panel4" x="150.0" y="10.0" parentComponent="Panel3"
                width="150" height="25" allowCallbacks="Context Menu" popupMenuItems="Ambience::Outdoor Drums&#10;Ambience::Aired Vox&#10;Ambience::GrandSpace &#10;Ambience::Distance Piano&#10;Rooms::Teenage Bedroom&#10;Rooms::Studio Closet &#10;Rooms::Coarsed Area&#10;Fx::SuperBounce&#10;Fx::Randomised Response"
@@ -65,13 +65,13 @@
              tooltip="Wet audio signal amount" suffix="%" isPluginParameter="1"
              pluginParameterName="WTPar"/>
   <Component type="ScriptLabel" id="Label1" x="110.0" y="470.0" fontName="Actay Wide"
-             text="HOLDUP" textColour="3640326646"/>
+             text="HOLDUP" textColour="2130377206"/>
   <Component type="ScriptLabel" id="Label2" x="270.0" y="470.0" text="HIGHCUT"
-             fontName="Actay Wide" textColour="3640326646"/>
+             fontName="Actay Wide" textColour="2130377206"/>
   <Component type="ScriptLabel" id="Label3" x="420.0" y="470.0" text="STRETCHX"
-             fontName="Actay Wide" textColour="3640326646"/>
+             fontName="Actay Wide" textColour="2130377206"/>
   <Component type="ScriptLabel" id="Label4" x="550.0" y="470.0" text="SIZE"
-             fontName="Actay Wide" textColour="3640326646"/>
+             fontName="Actay Wide" textColour="2130377206"/>
   <Component type="ScriptLabel" id="Label5" x="110.0" y="650.0" text="RATE"
              fontName="Actay Wide" textColour="3640326646"/>
   <Component type="ScriptLabel" id="Label6" x="270.0" y="650.0" text="DENSITY"

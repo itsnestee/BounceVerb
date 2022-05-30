@@ -60,6 +60,7 @@ Panel4.setMouseCallback(function(event)
 });
 Prev.setControlCallback(onPrevControl);
 Next.setControlCallback(onNextControl);
+Engine.loadUserPreset("Preset1");
 
 
 //Paint Routines
@@ -85,6 +86,7 @@ Panel4.setPaintRoutine(function(g)
 //Control Functions
 inline function onPanel4Control(component, value)
 {
+
     if (value)
     {
         local items = component.get("popupMenuItems").split("\n");
@@ -95,9 +97,9 @@ inline function onPanel4Control(component, value)
         Label11.set("text", t2);
     
         Console.print("Selected Item ID: " + value);
-      
+      	Console.print(PrList[value - 1]);
         
-        //Engine.loadUserPreset(PrList[value - 1]);
+        Engine.loadUserPreset(PrList[value - 1]);
     }
 };
 
@@ -112,7 +114,7 @@ inline function onPrevControl(component, value)
             
             Panel4.setValue(items.length +1);
         }
-        Engine.loadUserPreset(PrList[value - 1]);
+        Engine.loadPreviousUserPreset(0);
         Panel4.setValue(Panel4.getValue() - 1);
 	    Panel4.changed();
     }
@@ -130,7 +132,7 @@ inline function onNextControl(component, value)
         {
             Panel4.setValue(0);
         }
-        Engine.loadUserPreset(PrList[value + 1]);
+        Engine.loadNextUserPreset(0);
         Panel4.setValue(Panel4.getValue() + 1);
 	    Panel4.changed();
     }
