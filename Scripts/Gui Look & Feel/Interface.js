@@ -124,7 +124,7 @@ inline function onCut(component, value)
 	Labels[1].set("text", Math.round(value * 100) + Knobs[1].get("suffix"));
 	Labels[1].changed();
 
-	GraphTm.startTimer(40);
+	GraphFx.repaint();
 
 	VerbFx.setAttribute(VerbFx.Swallow, value);
 }
@@ -136,7 +136,7 @@ inline function onStretch(component, value)
 	Labels[2].set("text", Math.round(value * 100) + Knobs[2].get("suffix"));
 	Labels[2].changed();
 
-	GraphTm.startTimer(40);
+	GraphFx.repaint();
 
 	VerbFx.setAttribute(VerbFx.Stretch, value);
 }
@@ -148,7 +148,7 @@ inline function onSize(component, value)
 	Labels[3].set("text", Math.round(value * 100) + Knobs[3].get("suffix"));
 	Labels[3].changed();
 
-	GraphTm.startTimer(40);
+	GraphFx.repaint();
 
 	VerbFx.setAttribute(VerbFx.Size, value);
 }

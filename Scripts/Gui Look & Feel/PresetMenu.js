@@ -86,22 +86,22 @@ Panel4.setPaintRoutine(function(g)
 //Control Functions
 inline function onPanel4Control(component, value)
 {
-
-    if (value)
-    {
-        local items = component.get("popupMenuItems").split("\n");
-        local t = items[value - 1];
-        
-        //  Without submenu name
-        local t2 = t.substring(t.indexOf(":") + 2, t.length);
-        Label11.set("text", t2);
-    
-        Console.print("Selected Item ID: " + value);
-      	Console.print(PrList[value - 1]);
-        
-        Engine.loadUserPreset(PrList[value - 1]);
-    }
+		if (value)
+		{
+			local items = component.get("popupMenuItems").split("\n");
+			local t = items[value - 1];
+			
+			//  Without submenu name
+			local t2 = t.substring(t.indexOf(":") + 2, t.length);
+			Label11.set("text", t2);
+			
+			Engine.loadUserPreset("Preset" + value);
+		}
 };
+   
+           
+        
+
 
 // Prev-Button ----------------------------------------------------------------------------------------------
 inline function onPrevControl(component, value)
