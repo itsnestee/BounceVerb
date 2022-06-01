@@ -60,7 +60,7 @@ Panel4.setMouseCallback(function(event)
 });
 Prev.setControlCallback(onPrevControl);
 Next.setControlCallback(onNextControl);
-Engine.loadUserPreset("Preset1");
+Engine.loadUserPreset("Factory/Fx/Preset1");
 
 
 //Paint Routines
@@ -95,7 +95,7 @@ inline function onPanel4Control(component, value)
 			local t2 = t.substring(t.indexOf(":") + 2, t.length);
 			Label11.set("text", t2);
 			
-			Engine.loadUserPreset("Preset" + value);
+			Engine.loadUserPreset("Factory/Fx/Preset" + value);
 		}
 };
    

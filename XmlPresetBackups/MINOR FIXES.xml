@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Processor Type="SynthChain" ID="SingluarLoadPreset" Bypassed="0" Gain="1.0"
-           Balance="0.0" VoiceLimit="64.0" KillFadeTime="20.0" IconColour="0"
-           packageName="" BuildVersion="650">
+<Processor Type="SynthChain" ID="MINOR FIXES" Bypassed="0" Gain="1.0" Balance="0.0"
+           VoiceLimit="64.0" KillFadeTime="20.0" IconColour="0" packageName=""
+           BuildVersion="650">
   <ChildProcessors>
     <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
       <ChildProcessors>
@@ -10,7 +10,7 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptPanel" id="Panel2" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob1" value="339.0799865722656"/>
+            <Control type="ScriptSlider" id="Knob1" value="60.68000030517578"/>
             <Control type="ScriptSlider" id="Knob2" value="0.6600000262260437"/>
             <Control type="ScriptSlider" id="Knob3" value="0.6000000238418579"/>
             <Control type="ScriptSlider" id="Knob4" value="0.5099999904632568"/>
@@ -29,7 +29,7 @@
             <Control type="ScriptButton" id="Button2" value="0.0"/>
             <Control type="ScriptButton" id="Button4" value="0.0"/>
           </Content>
-          <UIData Source="SingluarLoadPresetUIData"/>
+          <UIData Source="MINOR FIXESUIData"/>
         </Processor>
       </ChildProcessors>
     </Processor>

@@ -114,7 +114,7 @@ inline function onHold(component, value)
 	Labels[0].changed();
 	compInit = 1;
 
-	VerbFx.setAttribute(VerbFx.Holdup, value);
+	VerbFx.setAttribute(VerbFx.Holdup, value / 1000);
 }
 
 inline function onCut(component, value)
